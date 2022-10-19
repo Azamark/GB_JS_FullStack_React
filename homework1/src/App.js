@@ -12,13 +12,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>HomeWork1</h1>
-      <Message message={message} />
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <input type='text' />
-        <button>Send</button>
-      </form>
+      <div className="container flex">
+        <h1>HomeWork1</h1>
+        <Message message={message} />
+        <hr />
+        <form onSubmit={handleSubmit}>
+          <p>write message</p>
+          <input type='text' />
+          <button>Send</button>
+        </form>
+      </div>
     </div>
   );
 }

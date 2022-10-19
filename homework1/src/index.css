@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1441px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.flex {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
