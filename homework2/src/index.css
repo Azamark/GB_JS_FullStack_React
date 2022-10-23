@@ -8,6 +8,7 @@
     max-width: 1441px;
     padding: 0 10px;
     margin: 0 auto;
+    height: 100vh;
 }
 
 button:hover {
@@ -19,7 +20,30 @@ button:hover {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+}
+
+.message {
+    width: 220px;
+    height: 40px;
+    background-color: bisque;
+    margin-bottom: 10px;
+}
+
+.form-submit {
+    width: 400px;
+    height: 170px;
+    padding: 3px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.form-submit button {
+    width: 30%
 }

@@ -1,26 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Message } from './components/Message.jsx'
+import { Form } from './components/Form.jsx'
 
 function App() {
-  const [message, stateMessage] = useState('');
+  const [messageList, setMessageList] = useState([]);
+  const [message, setMessage] = useState({
+    author: '',
+    text: ''
+  });
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-    console.log(ev.target[0].value);
-    stateMessage(ev.target[0].value);
-  }
+  useEffect(() => {
+    if (messageList.length > 0 && messageList.slice(-1)[0].author !== 'robot') {
+      setTimeout(() => {
+        setMessageList(prevstate => [...prevstate, { text: 'Привет! Я робот!', author: 'robot' }])
+      }, 1500)
+    }
+  }, [messageList]);
+
 
   return (
     <div className="App">
       <div className="container flex">
-        <h1>HomeWork1</h1>
-        <Message message={message} />
-        <hr />
-        <form onSubmit={handleSubmit}>
-          <p>write message</p>
-          <input type='text' />
-          <button>Send</button>
-        </form>
+        <h1>HomeWork2</h1>
+        <Form data={message} setData={setMessage} setMessage={setMessageList} />
+        <h2>
+          Сообщения:
+        </h2>
+        <div className='messageList'>
+          {
+            messageList.map((e, i) => <Message author={e.author} text={e.text} key={i} />)
+          }
+        </div>
       </div>
     </div>
   );
