@@ -1,8 +1,15 @@
 import { TextField, Button } from '@mui/material'
+import { useRef, useEffect } from 'react';
 
 export const Form = ({ data, setData, setMessage }) => {
 
     const { author, text } = data;
+
+    const inputRef = useRef();
+
+    useEffect(() => {
+        inputRef.current?.focus();
+    }, [inputRef.current]);
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
@@ -26,6 +33,7 @@ export const Form = ({ data, setData, setMessage }) => {
             <h3>Форма для отправки сообщения:</h3>
             <p>Автор:</p>
             <TextField
+                inputRef={inputRef}
                 placeholder="Имя"
                 value={author}
                 onChange={(e) => setData(
