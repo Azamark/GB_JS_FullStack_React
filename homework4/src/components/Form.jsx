@@ -1,3 +1,5 @@
+import { TextField, Button } from '@mui/material'
+
 export const Form = ({ data, setData, setMessage }) => {
 
     const { author, text } = data;
@@ -13,23 +15,35 @@ export const Form = ({ data, setData, setMessage }) => {
         setData(
             {
                 author: '',
-                text: ''
+                text: '',
             }
         )
     }
+
 
     return (
         <form className="form-submit" onSubmit={handleSubmit}>
             <h3>Форма для отправки сообщения:</h3>
             <p>Автор:</p>
-            <input placeholder="Имя" value={author} onChange={(e) => setData(
-                prevsate => ({ ...prevsate, author: e.target.value })
-            )} />
+            <TextField
+                placeholder="Имя"
+                value={author}
+                onChange={(e) => setData(
+                    prevsate => ({ ...prevsate, author: e.target.value })
+                )} />
             <p>Текст:</p>
-            <input placeholder="Текст" value={text} onChange={(e) => setData(
-                prevsate => ({ ...prevsate, text: e.target.value })
-            )} />
-            <button type="submit">Отправить</button>
+            <TextField
+                placeholder="Текст"
+                value={text}
+                onChange={(e) => setData(
+                    prevsate => ({ ...prevsate, text: e.target.value })
+                )} />
+            <Button
+                type="submit"
+                variant="contained"
+            >
+                Отправить
+            </Button>
         </form>
     )
 }

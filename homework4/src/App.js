@@ -7,7 +7,6 @@ function App() {
   const [message, setMessage] = useState({
     author: '',
     text: '',
-    id: Date.now()
   });
 
   useEffect(() => {
@@ -29,7 +28,7 @@ function App() {
         </h2>
         <div className='messageList'>
           {
-            messageList.map((e, i) => <Message author={e.author} text={e.text} key={e.id} />)
+            messageList.map((e, i) => <Message author={e.author} text={e.text} key={Date.now()} />)
           }
         </div>
       </div>
