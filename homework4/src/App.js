@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from './components/Message.jsx'
 import { Form } from './components/Form.jsx'
+import { Chatrooms } from './components/Chatrooms.jsx'
 
 function App() {
   const [messageList, setMessageList] = useState([]);
@@ -20,6 +21,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className='chatrooms'>
+        <Chatrooms />
+      </div>
       <div className="container flex">
         <h1>HomeWork4</h1>
         <Form data={message} setData={setMessage} setMessage={setMessageList} />
