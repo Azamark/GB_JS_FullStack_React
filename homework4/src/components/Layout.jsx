@@ -10,7 +10,7 @@ export const Layout = () => {
                     <NavLink className='navbar__link' to='/'>
                         Главная
                     </NavLink>
-                    <NavLink className='navbar__link' to='/chatpage'>
+                    <NavLink className='navbar__link' to='/form'>
                         Форма сообщения
                     </NavLink>
                 </div>
