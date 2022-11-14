@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Notfound from './pages/NotFounf.jsx';
+import ChatPage from './pages/ChatPage.jsx';
 import { Message } from './components/Message.jsx'
 import { Form } from './components/Form.jsx'
 import { Chatrooms } from './components/Chatrooms.jsx'
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path='chat/:id' element={<ChatPage />} />
           <Route path='*' element={<Notfound />} />
         </Route>
       </Routes>

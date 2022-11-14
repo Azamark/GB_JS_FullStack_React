@@ -22,7 +22,7 @@ export const Chatrooms = () => {
         <div className='chatrooms'>
             <List>
                 {
-                    chatsArray.map((e, i) => <Chat name={e.name} key={e.id} />)
+                    chatsArray.map((e, i) => <Chat id={e.id} name={e.name} key={e.id} />)
                 }
             </List>
         </div>
