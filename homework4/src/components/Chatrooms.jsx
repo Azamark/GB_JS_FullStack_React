@@ -19,10 +19,12 @@ export const Chatrooms = () => {
     ];
 
     return (
-        <List>
-            {
-                chatsArray.map((e, i) => <Chat name={e.name} key={e.id} />)
-            }
-        </List>
+        <div className='chatrooms'>
+            <List>
+                {
+                    chatsArray.map((e, i) => <Chat name={e.name} key={e.id} />)
+                }
+            </List>
+        </div>
     )
 }
