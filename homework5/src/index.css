@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    background-color: lightgray;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: rgb(47, 78, 134);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 20px;
+}
+
+.message {
+    width: 220px;
+    height: 40px;
+    background-color: bisque;
+    margin-bottom: 10px;
+}
+
+.form-submit {
+    width: 400px;
+    height: 300px;
+    padding: 3px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.form-submit button {
+    width: 30%
+}
+
+.chatrooms {
+    height: 100vh;
+    width: 20%;
+    padding: 20px;
+    background-color: rgb(48, 135, 186);
+}
