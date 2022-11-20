@@ -13,6 +13,9 @@ export const Layout = () => {
                     <NavLink className='navbar__link' to='/form'>
                         Форма сообщения
                     </NavLink>
+                    <NavLink className='navbar__link' to='/profile'>
+                        Пролфиль
+                    </NavLink>
                 </div>
             </header>
             <main className="App">

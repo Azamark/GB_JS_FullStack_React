@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx';
 import Notfound from './pages/NotFounf.jsx';
 import ChatPage from './pages/ChatPage.jsx';
 import { FormPage } from './pages/FormPage.jsx';
+import Profile from './pages/Profile.jsx';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='form' element={<FormPage />} />
           <Route path='chat/:id' element={<ChatPage />} />
+          <Route path='profile' element={<Profile />} />
           <Route path='*' element={<Notfound />} />
         </Route>
       </Routes>
